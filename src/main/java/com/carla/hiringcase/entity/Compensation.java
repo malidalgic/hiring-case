@@ -1,8 +1,11 @@
 package com.carla.hiringcase.entity;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -11,14 +14,15 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Compensation {
 
-    private LocalDateTime timestamp;
-    private String ageRange;
-    private String industry;
-    private String jobTitle;
-    private int annualSalary;
-    private String currency;
-    private String location;
-    private String workExperience;
-    private String additionalContext;
-    private String otherCurrency;
+    private Map<String, Object> properties = new LinkedHashMap<>();
+
+    @JsonAnyGetter
+    public Map<String, Object> getProperties() {
+        return properties;
+    }
+
+    @JsonAnySetter
+    public void setProperty(String name, Object value) {
+        this.properties.put(name, value);
+    }
 }
