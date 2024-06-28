@@ -10,6 +10,8 @@ import java.util.List;
 public class JsonReader {
     public static List<Compensation> readCompensationData(String filePath) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(new File(filePath), objectMapper.getTypeFactory().constructCollectionType(List.class, Compensation.class));
+        List<Compensation> compensations = objectMapper.readValue(new File(filePath), objectMapper.getTypeFactory().constructCollectionType(List.class, Compensation.class));
+        System.out.println("Loaded " + compensations.size() + " compensations from " + filePath);
+        return compensations;
     }
 }

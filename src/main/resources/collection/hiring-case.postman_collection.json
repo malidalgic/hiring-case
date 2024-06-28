@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "75ee21b8-fa11-45d9-930c-aecf100292b2",
+		"name": "hiring-case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22785614",
+		"_collection_link": "https://interstellar-meteor-513570.postman.co/workspace/a9be4a23-3ff2-45fd-8fc7-3605f2d6e3b4/collection/22785614-75ee21b8-fa11-45d9-930c-aecf100292b2?action=share&source=collection_link&creator=22785614"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/compensation_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/compensation_data"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/compensation_data?Please%20indicate%20the%20currency=EUR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation_data?Please%20indicate%20the%20currency=EUR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation_data"
+					],
+					"query": [
+						{
+							"key": "Please%20indicate%20the%20currency",
+							"value": "EUR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/compensation_data?Please%20indicate%20the%20currency=USD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation_data?Please%20indicate%20the%20currency=USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation_data"
+					],
+					"query": [
+						{
+							"key": "Please%20indicate%20the%20currency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/compensation_data?sort=Timestamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation_data?sort=Timestamp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation_data"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "Timestamp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/compensation_data/single?Timestamp=3/21/2016%2012:58:58",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation_data/single?Timestamp=3/21/2016%2012:58:58",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation_data",
+						"single"
+					],
+					"query": [
+						{
+							"key": "Timestamp",
+							"value": "3/21/2016%2012:58:58"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/compensation_data/single?Employer=Walmart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation_data/single?Employer=Walmart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation_data",
+						"single"
+					],
+					"query": [
+						{
+							"key": "Employer",
+							"value": "Walmart"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
